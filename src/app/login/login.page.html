@@ -1,0 +1,19 @@
+<ion-content>  
+  <ion-fab-button color="transparent" routerLink="/">
+    <ion-icon name="arrow-back" class="back_btn_arrow"></ion-icon>
+  </ion-fab-button>
+  <ion-title size="large">Login</ion-title>
+  <form (ngSubmit)="login()" [formGroup]="loginForm">
+  <ion-item>
+    <ion-label position="floating">Username</ion-label>
+    <ion-input required type="text" formControlName="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input required type="password" formControlName="pswd"></ion-input>
+  </ion-item>
+  <ion-button type="submit" class="login_btn" expand="block" size="default" [disabled]="!loginForm.valid">Login</ion-button>
+  </form>
+  <p>Don't have a account? <a routerLink="/signup" >Sign Up</a></p>
+  
+</ion-content>
