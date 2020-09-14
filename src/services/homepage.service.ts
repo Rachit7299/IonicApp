@@ -10,6 +10,9 @@ export class HomePageService{
     constructor(private http:HttpClient){}
 
     getcategories():Observable<any>{
-        return this.http.get('http://localhost:3000/categories');
+        return this.http.get('http://localhost:3000/home/categories');
     }
+    getfeaturedList():Observable<any>{
+      return this.http.get('http://localhost:3000/home/featured');
+  }
 }
