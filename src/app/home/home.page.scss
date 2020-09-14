@@ -15,13 +15,102 @@ ion-content{
   --padding-top: 3%;
 }
 
-ion-slide{
-  width: 250px; 
-  height: 175px; 
+.category-slide{
   margin: 5px; 
   border-radius: 8px;
   background: var(--my-color-var);
   background-size: cover;   
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  outline: none !important;
+}
+
+@media (min-width: 996px){
+  .category-slide{
+    width: 225px;
+    height: 155px;
+  }
+}
+
+@media (max-width: 995px){
+  .category-slide{
+    width: 145px;
+    height: 100px;
+  }
+}
+
+@media (min-width:1024px){
+  .category-slides{
+    margin-left: 1%;
+  }
+}
+.category_labels{
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 20px !important;
+  color: #ffffff;
+}
+
+.category_head{
+  font-family: Montserrat;
+  font-weight: 600;
+  font-size: 20px !important;
+  margin-left: 2%;
+  color: 	#787878;
+}
+
+.ripple-parent {
+  position: relative;
+  overflow: hidden;
+}
+
+.featuredCard{
+  height: 100%;
+  width: 100%;
+  margin: 0%;
+}
+
+.featured-slide{
+  width: 180px;
+  height: 266px;
+  margin: 8px; 
+  border-radius: 8px;
+  background: var(--my-color-var);
+  background-size: cover;   
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  outline: none !important;
+  overflow: hidden;
+}
+
+.card-title{
+  font-family: Montserrat;
+  font-weight: 600 ;
+  font-size: 16px;
+
+}
+
+.card-img{
+  height: 220px;
+  width: 100%;
+}
+
+.featured-card-content{
+  // padding: 0px;
+  border-top: 3px dashed #787878;
+  padding: 5px;
+  padding-right: 9px;
+  text-align: right;
+}
+
+
+.featured-card-content h3{
+  font-weight: 500;
+  font-size: 16px;
+  font-family: Montserrat;
+  color: #667FEA;
+}
+
+.featured-card-header{
+  padding: 4px;
+  text-align: left;
 }
 
