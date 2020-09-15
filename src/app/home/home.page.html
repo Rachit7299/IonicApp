@@ -22,8 +22,9 @@
       <ion-ripple-effect></ion-ripple-effect>
     </ion-slide>
   </ion-slides> 
-  <ion-text>
-    <h4 class="category_head">Featured</h4>
+  <ion-text style="line-height: 52px;">
+    <h4 class="category_head" >Featured</h4>
+    <a routerLink="/featured" class="link_text">See All</a>
   </ion-text>
   <ion-slides class="category-slides" [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
     <ion-slide class="featured-slide" *ngFor="let items of feturedCardList" >
@@ -40,8 +41,9 @@
         </ion-card>
       </ion-slide>
     </ion-slides> 
-    <ion-text>
+    <ion-text style="line-height: 52px;">
       <h4 class="category_head">Top Picks</h4>
+      <a routerLink="/featured" class="link_text">See All</a>
     </ion-text>
     <ion-slides class="category-slides" [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
     <ion-slide class="featured-slide" *ngFor="let items of feturedCardList" >

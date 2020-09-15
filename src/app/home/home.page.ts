@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroupDirective, NgForm } from "@angular/forms";
 import { HomePageService} from '../../services/homepage.service';
+import * as AOS from 'aos'
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ export class HomePage implements OnInit {
   })
 
   ngOnInit() {
+    AOS.init();
     this.apiService.getcategories().subscribe(
       (data)=>{
         this.categoryCardList=data;        

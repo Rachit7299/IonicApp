@@ -51,6 +51,7 @@ ion-content{
 }
 
 .category_head{
+  display: inline;
   font-family: Montserrat;
   font-weight: 600;
   font-size: 20px !important;
@@ -114,3 +115,12 @@ ion-content{
   text-align: left;
 }
 
+.link_text{
+  float: right; 
+  font-family: Montserrat; 
+  font-weight: 600;
+  margin-bottom: 0px; 
+  color: #4864e2; 
+  outline: none; 
+  text-decoration: none;
+}
