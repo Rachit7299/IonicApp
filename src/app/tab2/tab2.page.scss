@@ -1,1 +1,89 @@
 
+.my-custom-menu {
+    --width: 500px;
+  }
+
+ion-toolbar{
+  --background: linear-gradient(to left , #667FEA, #64B3FE);
+  color: #ffffff;
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+ion-content{
+  --padding-start: 3%;
+  --padding-end: 3%;
+  --padding-top: 3%;
+}
+
+.carousel-item.active {
+    display: block;
+    overflow: hidden;
+    max-height: 476px;
+}
+
+.category_head{
+    display: inline;
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 20px !important;
+    margin-left: 2%;
+    color: 	#787878;
+  }
+
+  .link_text{
+    float: right; 
+    font-family: Montserrat; 
+    font-weight: 600;
+    margin-bottom: 0px; 
+    color: #4864e2; 
+    outline: none; 
+    text-decoration: none;
+  }
+
+  //card css
+  .featured-card-content{
+    // padding: 0px;
+    border-top: 3px dashed #787878;
+    padding: 5px;
+    padding-right: 9px;
+    text-align: right;
+  }
+  
+  
+  .featured-card-content h3{
+    font-weight: 500;
+    font-size: 16px;
+    font-family: Montserrat;
+    color: #667FEA;
+  }
+
+  .featuredCard{
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+  }
+  
+  .featured-slide{
+    width: 180px;
+    height: 266px;
+    margin: 8px; 
+    border-radius: 8px;
+    background: var(--my-color-var);
+    background-size: cover;   
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    outline: none !important;
+    overflow: hidden;
+  }
+  
+  .card-title{
+    font-family: Montserrat;
+    font-weight: 600 ;
+    font-size: 16px;
+  
+  }
+  
+  .card-img{
+    height: 220px;
+    width: 100%;
+  }

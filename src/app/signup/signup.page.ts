@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroupDirective, NgForm } from "@angular/forms";
+import { ToastController } from '@ionic/angular';
+import {SignUpPageService } from '../../services/signuppage.service';
 
 @Component({
   selector: 'app-signup',
@@ -8,7 +10,7 @@ import { FormBuilder, Validators, FormGroupDirective, NgForm } from "@angular/fo
 })
 export class SignupPage implements OnInit {
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private apiService: SignUpPageService, public toastController: ToastController) { }
 
   signUpForm = this.fb.group({
     name:[''],
@@ -21,8 +23,23 @@ export class SignupPage implements OnInit {
   ngOnInit() {
   }
 
+  async presentToast(x) {
+    if(x=='409'){
+      x='User Already Exist!'
+    }
+    const toast = await this.toastController.create({
+      message: x,
+      duration: 2000
+    });
+    toast.present();
+  }
+
   signUp(){
-    console.log("Form Submitted");
-    console.log(this.signUpForm.value);
+    this.apiService.registeruser(this.signUpForm.value).subscribe(
+      (data)=>{
+        this.presentToast(data.status);
+    },(err)=>{
+      this.presentToast(err.status);
+    })
   }
 }
