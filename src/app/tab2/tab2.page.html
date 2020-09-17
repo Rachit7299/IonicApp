@@ -26,7 +26,7 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<ion-text style="line-height: 52px;">
+<ion-text style="line-height: 52px; padding-left: 3%; padding-right: 3%;">
   <h4 class="category_head" >Top Deals</h4>
   <a routerLink="/featured" class="link_text">See All</a>
 </ion-text>
@@ -45,4 +45,71 @@
       </ion-card>
     </ion-slide>
   </ion-slides> 
+  <div style="background-color: yellow; padding-top: 1%;">
+    <ion-text style="line-height: 52px;">
+      <h4 class="category_head" style="color: black;">Flash Deals</h4>
+      <ion-button routerLink="/featured" class="link_text" color="light">See All</ion-button>
+    </ion-text>
+      <ul class="cards">
+    <li class="cards_item">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <div class="card">
+              <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                <button class="btn card_btn">Read More</button>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col size="6">
+            <div class="card">
+              <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                <button class="btn card_btn">Read More</button>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </li>
+    <li class="cards_item">
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <div class="card">
+              <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                <button class="btn card_btn">Read More</button>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col size="6">
+            <div class="card">
+              <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
+              <div class="card_content">
+                <h2 class="card_title">Card Grid Layout</h2>
+                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                <button class="btn card_btn">Read More</button>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </li>
+    <li class="cards_item" id="pc_view_img" >
+      <img src="../../assets/shoe_tr.png" class="w-100">
+    </li>
+  </ul>
+  </div>
+  <div id="mob_view_img">
+    <img src="../../assets/shoe_tr.png" class="w-100">
+  </div>
 </ion-content>
