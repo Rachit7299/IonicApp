@@ -6,13 +6,20 @@
   <form (ngSubmit)="login()" [formGroup]="loginForm">
   <ion-item>
     <ion-label position="floating">Username</ion-label>
-    <ion-input required type="text" formControlName="name"></ion-input>
+    <ion-input required type="text" formControlName="username"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label position="floating">Password</ion-label>
     <ion-input required type="password" formControlName="pswd"></ion-input>
   </ion-item>
-  <ion-button type="submit" class="login_btn" expand="block" size="default" [disabled]="!loginForm.valid">Login</ion-button>
+  <ion-button *ngIf="!isLoading" type="submit" class="login_btn" expand="block" size="default" [disabled]="!loginForm.valid">Login</ion-button>
+  <ion-button *ngIf="isLoading" type="submit" class="login_btn" expand="block" size="default" [disabled]>
+    <div class="text-center">
+      <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+  </ion-button>
   </form>
   <p>Don't have a account? <a routerLink="/signup" >Sign Up</a></p>
   

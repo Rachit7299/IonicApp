@@ -34,13 +34,12 @@
   <ion-slide class="featured-slide" *ngFor="let items of feturedCardList" >
     <ion-card class="featuredCard" >
     <img class="card-img" src="{{items.image}}">
-    <!-- <ion-card-header class="featured-card-header">
-      <ion-card-subtitle>{{items.title}}</ion-card-subtitle>
-    </ion-card-header> -->
     <ion-card-content class="featured-card-content">
-      <h3 class="card-link-text">View
-      <ion-icon name="arrow-forward" item-right color="primary"></ion-icon>
-      </h3>
+      <div class="details">
+        <h1>{{items.title}}</h1>
+        <p>£250</p>
+      </div>
+      <div class="buy" routerLink="/featured"><ion-icon name="eye"></ion-icon></div>
     </ion-card-content>
       </ion-card>
     </ion-slide>
@@ -55,22 +54,30 @@
       <ion-grid>
         <ion-row>
           <ion-col size="6">
-            <div class="card">
-              <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
-              <div class="card_content">
-                <h2 class="card_title">Card Grid Layout</h2>
-                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-                <button class="btn card_btn">Read More</button>
+            <div class="featured-slide">
+              <div class="featuredCard">
+                <img class="card-img" src="https://s-media-cache-ak0.pinimg.com/736x/49/80/6f/49806f3f1c7483093855ebca1b8ae2c4.jpg">
+                <ion-card-content class="featured-card-content">
+                  <div class="details">
+                    <h1>Chair</h1>
+                    <p>£250</p>
+                  </div>
+                  <div class="buy" routerLink="/featured"><ion-icon name="eye"></ion-icon></div>
+                </ion-card-content>
               </div>
             </div>
-          </ion-col>
+        </ion-col>
           <ion-col size="6">
-            <div class="card">
-              <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
-              <div class="card_content">
-                <h2 class="card_title">Card Grid Layout</h2>
-                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-                <button class="btn card_btn">Read More</button>
+            <div class="featured-slide">
+              <div class="featuredCard">
+                <img class="card-img" src="https://s-media-cache-ak0.pinimg.com/736x/49/80/6f/49806f3f1c7483093855ebca1b8ae2c4.jpg">
+                <ion-card-content class="featured-card-content">
+                  <div class="details">
+                    <h1>Chair</h1>
+                    <p>£250</p>
+                  </div>
+                  <div class="buy" routerLink="/featured"><ion-icon name="eye"></ion-icon></div>
+                </ion-card-content>
               </div>
             </div>
           </ion-col>
@@ -82,22 +89,30 @@
       <ion-grid>
         <ion-row>
           <ion-col size="6">
-            <div class="card">
-              <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
-              <div class="card_content">
-                <h2 class="card_title">Card Grid Layout</h2>
-                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-                <button class="btn card_btn">Read More</button>
+            <div class="featured-slide">
+              <div class="featuredCard">
+                <img class="card-img" src="https://s-media-cache-ak0.pinimg.com/736x/49/80/6f/49806f3f1c7483093855ebca1b8ae2c4.jpg">
+                <ion-card-content class="featured-card-content">
+                  <div class="details">
+                    <h1>Chair</h1>
+                    <p>£250</p>
+                  </div>
+                  <div class="buy" routerLink="/featured"><ion-icon name="eye"></ion-icon></div>
+                </ion-card-content>
               </div>
             </div>
           </ion-col>
           <ion-col size="6">
-            <div class="card">
-              <div class="card_image"><img src="https://picsum.photos/500/300/?image=10"></div>
-              <div class="card_content">
-                <h2 class="card_title">Card Grid Layout</h2>
-                <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-                <button class="btn card_btn">Read More</button>
+            <div class="featured-slide">
+              <div class="featuredCard">
+                <img class="card-img" src="https://s-media-cache-ak0.pinimg.com/736x/49/80/6f/49806f3f1c7483093855ebca1b8ae2c4.jpg">
+                <ion-card-content class="featured-card-content">
+                  <div class="details">
+                    <h1>Chair</h1>
+                    <p>£250</p>
+                  </div>
+                  <div class="buy" routerLink="/featured"><ion-icon name="eye"></ion-icon></div>
+                </ion-card-content>
               </div>
             </div>
           </ion-col>

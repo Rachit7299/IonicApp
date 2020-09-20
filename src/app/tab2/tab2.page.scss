@@ -10,11 +10,9 @@ ion-toolbar{
   font-weight: 500;
 }
 
-// ion-content{
-//   --padding-start: 3%;
-//   --padding-end: 3%;
-//   --padding-top: 3%;
-// }
+ion-content{
+  background: #E3E3D8;
+}
 
 .carousel-item.active {
     display: block;
@@ -50,20 +48,9 @@ ion-toolbar{
   }
 
   .featured-card-content{
-    // padding: 0px;
-    border-top: 3px dashed #787878;
-    padding: 5px;
-    padding-right: 9px;
-    text-align: right;
-  }
-  
-  
-  .featured-card-content h3{
-    font-weight: 500;
-    font-size: 16px;
-    font-family: Montserrat;
-    color: #667FEA;
-  }
+    padding: 0px;
+  } 
+
 
   .featuredCard{
     height: 100%;
@@ -73,58 +60,71 @@ ion-toolbar{
   
   .featured-slide{
     width: 180px;
-    height: 266px;
+    height: fit-content;
     margin: 8px; 
     border-radius: 8px;
-    background: var(--my-color-var);
     background-size: cover;   
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     outline: none !important;
     overflow: hidden;
   }
   
-  .card-title{
+  .details {
+    padding: 4px;
+    padding-left:7px;
+    float: left;
+    width: calc(70% - 2px);
+    text-align:left;
     font-family: Montserrat;
-    font-weight: 600 ;
-    font-size: 16px;
-  
+  }
+
+  .details h1{
+    font-family: Montserrat;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+    max-width: 100%;
+    display: block;
+    height: 30px;
+    overflow: hidden;
+    line-height: 15px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+  }
+
+  .details p{
+    font-family: Montserrat;
+    font-weight: 500 ;
+    font-size: 12px;
   }
   
+  .buy {
+    float: right;
+    width: calc(30% - 2px);
+    height: 100%;
+    background: #f1f1f1;
+    transition: background 0.5s;
+    border-left: solid thin rgba(0, 0, 0, 0.1);
+  }
+  .buy ion-icon {
+    font-size: 30px;
+    padding: 10px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    cursor: pointer;
+    outline: none !important;
+    color: #254053;
+    transition: transform 0.5s;
+  }
+
   .card-img{
     height: 220px;
     width: 100%;
   }
 
   //product card grid
-  h1 {
-    font-size: 24px;
-    font-weight: 400;
-    text-align: center;
-}
 
-img {
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-.btn {
-  color: #ffffff;
-  padding: 0.8rem;
-  font-size: 14px;
-  text-transform: uppercase;
-  border-radius: 4px;
-  font-weight: 400;
-  display: block;
-  width: 100%;
-  cursor: pointer;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
-}
-
-.btn:hover {
-  background-color: rgba(255, 255, 255, 0.12);
-}
 
 .cards {
   display: flex;
@@ -159,6 +159,20 @@ img {
   #pc_view_img{
     display: block;
   }
+  .cards_item  .buy ion-icon {
+    font-size: 30px;
+    padding: 14px;
+    padding-left: 19%;
+    cursor: pointer;
+    outline: none !important;
+    color: #254053;
+    transition: transform 0.5s;
+  }
+
+    .cards_item   .card-img{
+      height: 240px;
+      width: 100%;
+    }
 }
 @media(max-width: 895px){
   #mob_view_img{
@@ -167,37 +181,28 @@ img {
   #pc_view_img{
     display: none;
   }
+    .cards_item  .buy ion-icon {
+    font-size: 30px;
+    padding: 18%;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    cursor: pointer;
+    outline: none !important;
+    color: #254053;
+    transition: transform 0.5s;
+  }
 }
 
-.card {
-  background-color: white;
-  border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-  display: flex;
-  flex-direction: column;
+.cards_item   .featured-slide{
+  width: 100%;
+  height: fit-content;
+  margin: 0px; 
+  border-radius: 8px;
+  background: #ffffff;
+  background-size: cover;   
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  outline: none !important;
   overflow: hidden;
-}
-
-.card_content {
-  padding: 1rem;
-  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
-}
-
-.card_title {
-  color: #ffffff;
-  font-size: 1.1rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  margin: 0px;
-}
-
-.card_text {
-  color: #ffffff;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;    
-  font-weight: 400;
 }
 
 ion-grid{

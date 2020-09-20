@@ -46,7 +46,7 @@
       <a routerLink="/featured" class="link_text">See All</a>
     </ion-text>
     <ion-slides class="category-slides" [options]="{ slidesPerView: 'auto', zoom: false, grabCursor: true }">
-    <ion-slide class="featured-slide" *ngFor="let items of feturedCardList" >
+    <ion-slide class="featured-slide" *ngFor="let items of topPicksList" >
       <ion-card class="featuredCard" >
       <img class="card-img" src="{{items.image}}">
       <!-- <ion-card-header class="featured-card-header">

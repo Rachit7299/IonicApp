@@ -9,22 +9,23 @@ import { HomePageService} from '../../services/homepage.service';
 export class Tab2Page {
   currentImage: any;
   feturedCardList=[];
-  caraouselList=[
-    {"img":"../../assets/carousel2.jpg"},
-    {"img":"../../assets/carousel3.jpg"},
-    {"img":"../../assets/carousel5.jpg"}
-  ]
+  caraouselList=[];
 
   constructor(public photoService: PhotoService, private apiService: HomePageService) {  }
 
   ngOnInit() {
-    this.photoService.loadSaved();
     this.apiService.getfeaturedList().subscribe(
       (data)=>{
         this.feturedCardList=data;
       },(err)=>{
         console.log(err)
       });
+      this.apiService.getcaraousel().subscribe(
+        (data)=>{
+          this.caraouselList=data;
+        },(err)=>{
+          console.log(err)
+        });
   }
 
 }

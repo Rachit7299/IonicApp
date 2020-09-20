@@ -15,4 +15,10 @@ export class HomePageService{
     getfeaturedList():Observable<any>{
       return this.http.get('http://localhost:3000/home/featured');
   }
+    gettopPicks():Observable<any>{
+      return this.http.get('http://localhost:3000/home/toppicks');
+    }
+    getcaraousel():Observable<any>{
+      return this.http.get('http://localhost:3000/home/caraousel');
+    }
 }
