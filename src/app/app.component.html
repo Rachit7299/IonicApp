@@ -1,13 +1,21 @@
+
 <ion-app>
   <ion-menu side="start" menuId="main-menu" contentId="main">
     <ion-header>
-      <ion-toolbar color="primary">
-        <ion-menu-toggle><ion-title routerLink="/" style="text-decoration: none; outline: none; font-family: Montserrat;"><ion-img src="./assets/shopify-seeklogo.com.svg" style="width: 70%; margin: 10%; margin-left: 15%;"></ion-img></ion-title></ion-menu-toggle>
+      <ion-toolbar style="--background: linear-gradient(to right, #8e2de2, #4a00e0);">
+        <ion-item style="--background: linear-gradient(to right, #8e2de2, #4a00e0); padding-top: 5%; padding-bottom: 5%; --inner-border-width: 0px; ">
+          <ion-avatar slot="start" style="    --inner-border-width: 0px;">
+            <img src="../assets/person.png">
+          </ion-avatar>          
+          <h3 style="font-size: 16px; color: #ffffff; font-family: Montserrat; margin-top: 7px;"><span style="font-size: 12px;">WELCOME</span><br>Guest</h3>
+        </ion-item>
+        
       </ion-toolbar>
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-menu-toggle><ion-item *ngIf="!loggedIn"  routerLink='/welcome' style="font-family: Montserrat;"><ion-icon name="log-in"></ion-icon>    Login/Sign Up</ion-item></ion-menu-toggle>
+        <ion-menu-toggle><ion-item  routerLink='/' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="home"></ion-icon>    Home</ion-item></ion-menu-toggle>
+        <ion-menu-toggle><ion-item *ngIf="!loggedIn"  routerLink='/welcome' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="log-in"></ion-icon>    Login/Sign Up</ion-item></ion-menu-toggle>
         <ion-item>Menu Item</ion-item>
         <ion-item>Menu Item</ion-item>
         <ion-item>Menu Item</ion-item>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../../services/product.service';
 
 @Component({
   selector: 'app-featured',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeaturedPage implements OnInit {
 
-  constructor() { }
-
+  constructor( private apiservice: ProductService) { }
+  x=[]
   ngOnInit() {
+    this.apiservice.getProductsAll().subscribe(
+      (data)=>{
+        this.x=data;
+      }
+    )
   }
 
 }

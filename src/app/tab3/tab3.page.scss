@@ -1,1 +1,113 @@
+.my-custom-menu {
+    --width: 500px;
+  }
 
+ion-toolbar{
+  --background: linear-gradient(to left , #667FEA, #64B3FE);
+  color: #ffffff;
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+.login_warn{
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.login_btn{
+    position: relative;
+    margin-top: 2px;
+    --color:#fff;
+    --background: linear-gradient(to right , #667FEA, #64B3FE);
+    --background-activated: linear-gradient(to right , #667FEA, #64B3FE);
+    --background-hover: linear-gradient(to right , #667FEA, #64B3FE);
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 14px;
+    height: 36px;
+    outline: none;
+}
+
+@media (min-width:896px){
+    .login_btn{
+        left: 46%;
+    }
+    .login_warn{
+        margin-top: 20%;
+    }
+}
+
+@media (max-width:895px){
+    .login_btn{
+        left: 42%;
+    }
+    .login_warn{
+        margin-top: 40%;
+    }
+}
+
+@media (max-width: 575px){
+    .login_btn{
+        left: 38%;
+    }
+    .login_warn{
+        margin-top: 50%;
+    }
+}
+
+.row{
+    height: 100%;
+}
+
+.img_col{
+    background-image: url('../../assets/4054122.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.img_col ion-img{
+    height: 128px;
+    width: 100%;
+    margin-top: 8%;
+    // margin-left: 35%;
+}
+
+.img_col h3{
+    font-family: Montserrat;
+    font-weight: 500;
+    font-size: 22px;
+    text-align: center;
+    color: #fff;
+}
+
+.detail{
+    font-family: Montserrat;
+    color: rgb(80, 80, 80);
+}
+
+.det_col{
+    padding-left: 8%;
+    padding-right: 8%;
+    background-image: url('../../assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hd{
+    font-family: Montserrat;
+    color: darkgray;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 7px;
+}
+
+.vl{
+    font-family: Montserrat;
+    color: rgb(99, 98, 98);
+    font-size: 16px;
+    margin-top: 5px;
+}
