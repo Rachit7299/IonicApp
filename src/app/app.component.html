@@ -7,7 +7,7 @@
           <ion-avatar slot="start" style="    --inner-border-width: 0px;">
             <img src="../assets/person.png">
           </ion-avatar>          
-          <h3 style="font-size: 16px; color: #ffffff; font-family: Montserrat; margin-top: 7px;"><span style="font-size: 12px;">WELCOME</span><br>Guest</h3>
+          <h3 style="font-size: 16px; color: #ffffff; font-family: Montserrat; margin-top: 7px;"><span style="font-size: 12px;">WELCOME</span><br><span *ngIf="!loggedIn">Guest</span><span *ngIf="loggedIn">{{name}}</span></h3>
         </ion-item>
         
       </ion-toolbar>
@@ -16,11 +16,11 @@
       <ion-list>
         <ion-menu-toggle><ion-item  routerLink='/' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="home"></ion-icon>    Home</ion-item></ion-menu-toggle>
         <ion-menu-toggle><ion-item *ngIf="!loggedIn"  routerLink='/welcome' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="log-in"></ion-icon>    Login/Sign Up</ion-item></ion-menu-toggle>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-item>Menu Item</ion-item>
-        <ion-menu-toggle><ion-item *ngIf="loggedIn"  (click)="logout()" style="font-family: Montserrat;"><ion-icon name="log-out"></ion-icon>    Logout</ion-item></ion-menu-toggle>
+        <ion-menu-toggle><ion-item   routerLink='/cart' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="grid"></ion-icon>    Categories</ion-item></ion-menu-toggle>
+        <ion-menu-toggle><ion-item   routerLink='/featured' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="shirt"></ion-icon>    Featured</ion-item></ion-menu-toggle>
+        <ion-menu-toggle><ion-item   routerLink='/cart' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="cart"></ion-icon>    Cart</ion-item></ion-menu-toggle>
+        <ion-menu-toggle><ion-item   routerLink='/cart' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="settings"></ion-icon>    My Account</ion-item></ion-menu-toggle>
+        <ion-menu-toggle><ion-item *ngIf="loggedIn"  (click)="logout()" style="font-family: Montserrat; --inner-border-width: 0px; cursor: pointer;"><ion-icon name="log-out"></ion-icon>    Logout</ion-item></ion-menu-toggle>
       </ion-list>
     </ion-content>
   </ion-menu>

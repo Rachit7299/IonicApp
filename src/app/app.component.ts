@@ -19,6 +19,7 @@ export class AppComponent {
   }
 
   loggedIn:boolean;
+  name:String;
 
   initializeApp() {
     this.platform.ready().then(() => {
@@ -31,6 +32,13 @@ export class AppComponent {
     let t = localStorage.getItem('token');
     if(t){
       this.loggedIn=true;
+      this.LoginPageService.getuserName().subscribe(
+        (user)=>{
+          this.name=user;
+        },(err)=>{
+          console.log(err);
+          this.name= "Guest";
+        })
     }
     else{
       this.loggedIn=false;

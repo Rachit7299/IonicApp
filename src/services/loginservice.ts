@@ -21,7 +21,20 @@ export class LoginPageService{
 
     logoutUser() {
       localStorage.removeItem('token');
+      localStorage.removeItem('userId');
       this.router.navigate(['']);
-      window.location.reload();
+      window.location.replace('/tabs/home');
+    }
+
+    getuserName():Observable<any>{
+      return this.http.get('http://localhost:3000/user/name/'+localStorage.getItem('userId'));
+    }
+
+    getUserDetails():Observable<any>{
+      return this.http.get('http://localhost:3000/user/'+localStorage.getItem('userId'));
+    }
+
+    deleteUser():Observable<any>{
+      return this.http.delete('http://localhost:3000/user/deleteUser/'+localStorage.getItem('userId'));
     }
 }

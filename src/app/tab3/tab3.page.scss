@@ -97,6 +97,15 @@ ion-toolbar{
     background-repeat: no-repeat;
 }
 
+@media (min-width: 767px){
+    .det_col{
+        padding-top: 4%;
+    }
+    .img_col{
+        padding-top: 9%;
+    }
+}
+
 .hd{
     font-family: Montserrat;
     color: darkgray;
