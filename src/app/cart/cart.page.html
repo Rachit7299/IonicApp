@@ -1,9 +1,36 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>cart</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-text *ngIf="!signedIn">
+    <p class="login_warn">Login To view your Cart.</p>
+  </ion-text>
+  <ion-button *ngIf="!signedIn"  type="button" class="login_btn"  size="default">Login</ion-button>
 
+
+  <ion-fab-button *ngIf="signedIn" color="transparent" routerLink="/">
+    <ion-icon name="arrow-back" class="back_btn_arrow"></ion-icon>
+  </ion-fab-button>
+  <ion-text *ngIf="signedIn" style="line-height: 52px;">
+    <h4 class="category_head" >Cart</h4>
+    <a class="link_text"><ion-icon slot="start" name="trash"></ion-icon>Clear Cart</a>
+  </ion-text>
+  <div *ngIf="signedIn" class="row">
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-7">
+      <div class="item_card row" *ngFor="let i of x">
+        <div class="col img_col">
+          <img src="../../assets/menshirt.png">
+        </div>
+        <div class="col detail_col">
+          <h3>Mens T-shirt</h3>
+          <h2>$42</h2>
+          <p>Rating:4</p>
+          <a href="#" color="primary">View Details</a>&nbsp;&nbsp;
+          <a href="#" style="color: rgb(196, 28, 28); border-left: 1px solid #464646;">&nbsp;&nbsp;Delete</a>
+        </div>
+      </div> 
+    </div>
+    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <div class="price_card row">
+
+      </div>
+    </div>
+  </div>
 </ion-content>

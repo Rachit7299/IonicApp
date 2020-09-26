@@ -49,7 +49,6 @@ export class LoginPage implements OnInit {
         this.presentToast(data.status);
         localStorage.setItem('token',data.token);
         localStorage.setItem('userId',data._id);
-        this.router.navigate(['']);
         window.location.replace('/tabs/home');
     },(err)=>{
       this.presentToast(err.status);
