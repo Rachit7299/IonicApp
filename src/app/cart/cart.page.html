@@ -2,34 +2,89 @@
   <ion-text *ngIf="!signedIn">
     <p class="login_warn">Login To view your Cart.</p>
   </ion-text>
-  <ion-button *ngIf="!signedIn"  type="button" class="login_btn"  size="default">Login</ion-button>
+  <ion-button *ngIf="!signedIn"  type="button" class="login_btn"  size="default" routerLink="/login">Login</ion-button>
 
+  <ion-spinner *ngIf="signedIn && isLoading" name="bubbles"></ion-spinner>
 
-  <ion-fab-button *ngIf="signedIn" color="transparent" routerLink="/">
+  <ion-fab-button *ngIf="signedIn && !isLoading" color="transparent" routerLink="/">
     <ion-icon name="arrow-back" class="back_btn_arrow"></ion-icon>
   </ion-fab-button>
-  <ion-text *ngIf="signedIn" style="line-height: 52px;">
+  <ion-text *ngIf="signedIn  && !isLoading" style="line-height: 52px;">
     <h4 class="category_head" >Cart</h4>
-    <a class="link_text"><ion-icon slot="start" name="trash"></ion-icon>Clear Cart</a>
+    <a class="link_text" (click)="delCart()"><ion-icon slot="start" name="trash"></ion-icon>Clear Cart</a>
   </ion-text>
-  <div *ngIf="signedIn" class="row">
+  <div *ngIf="signedIn && !isLoading" class="row">
     <div class="col-xs-8 col-sm-8 col-md-8 col-lg-7">
-      <div class="item_card row" *ngFor="let i of x">
+      <h3 *ngIf="noItem" style="    text-align: center;
+      font-size: 22px;
+      font-family: Montserrat;
+      font-weight: 500;">No items in your cart!</h3>
+      <div class="item_card row" *ngFor="let item of cartItems">
         <div class="col img_col">
-          <img src="../../assets/menshirt.png">
+          <img src="{{item.image}}">
         </div>
         <div class="col detail_col">
-          <h3>Mens T-shirt</h3>
-          <h2>$42</h2>
+          <h3>{{item.title}}</h3>
+          <h2>${{item.price}}</h2>
           <p>Rating:4</p>
           <a href="#" color="primary">View Details</a>&nbsp;&nbsp;
-          <a href="#" style="color: rgb(196, 28, 28); border-left: 1px solid #464646;">&nbsp;&nbsp;Delete</a>
+          <a style="color: rgb(196, 28, 28); border-left: 1px solid #464646;" (click)="deleteitem(item._id)">&nbsp;&nbsp;Delete</a>
         </div>
       </div> 
     </div>
     <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
       <div class="price_card row">
-
+        <div class="col">
+          <h3>Price Details</h3>
+          <hr>
+          <div class="row">
+            <div class="col">
+              <ion-text>
+                <p style="display: inline;">Price ({{cartItems.length}} items)</p>
+                <p style="float: right;">${{cartTotal}}</p>
+              </ion-text>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <ion-text>
+                <p style="display: inline;">Applicable Discount</p>
+                <p style="float: right;">-${{discount}}</p>
+              </ion-text>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <ion-text>
+                <p style="display: inline;">Delivery Fee</p>
+                <p style="float: right;">{{delFee}}</p>
+              </ion-text>
+            </div>
+          </div>
+          <hr>
+          <div class="row">
+            <div class="col">
+              <ion-text>
+                <p style="display: inline;">Total</p>
+                <p style="float: right;">${{total}}</p>
+              </ion-text>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="txt">Safe and Secure Payments. Easy Returns. 100% Authentic</p>
+      <div class="checkout_card row">
+           <div class="col" style="padding-right: 0%;">
+            <ion-text>
+              <p style="display: inline;
+              line-height: 36px;
+              font-family: Montserrat;
+              font-weight: 600;
+              font-size: 18px;">${{total}}</p>
+            </ion-text>
+             <ion-button style="float: right; left:0% ; margin:0%"  type="button" class="login_btn"  size="default">Checkout</ion-button>
+          </div>
+        
       </div>
     </div>
   </div>
