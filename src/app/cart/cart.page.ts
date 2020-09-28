@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductService } from '../../services/product.service'
+import { ProductService } from '../../services/product.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -8,7 +9,7 @@ import { ProductService } from '../../services/product.service'
 })
 export class CartPage implements OnInit {
 
-  constructor(private apiService: ProductService) { }
+  constructor(private apiService: ProductService, private router: Router) { }
 
   x=[1,2,3,4,5,6];
   cartItems=[];
@@ -31,7 +32,7 @@ export class CartPage implements OnInit {
           if(response!=null){
             this.cartItems=response.items;
             this.cartTotal=response.total;
-            this.discount=this.cartTotal/10;
+            this.discount=Math.floor(this.cartTotal/10);
             if(this.cartTotal<200){
               this.delFee="$29";
               this.total=this.cartTotal-this.discount+29;
@@ -92,6 +93,12 @@ export class CartPage implements OnInit {
         }
       }
     )
+  }
+
+  product(_id){    
+    this.router.navigate(['/product'],{
+      state:{id: _id}
+    });
   }
 
 }

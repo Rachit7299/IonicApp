@@ -26,7 +26,12 @@ export class ProductService{
     }
 
     addCart(_id:String):Observable<any>{
-        return this.http.post('http://localhost:3000/products/addcart/'+localStorage.getItem('userId')+'&'+_id,1);
+        return this.http.post('http://localhost:3000/products/addcart/'+localStorage.getItem('userId')+'&'+_id,{id:localStorage.getItem('userId')});
+    }
+
+    getProduct(_id:String):Observable<any>{
+        console.log(_id);
+        return this.http.get('http://localhost:3000/products/viewProduct/'+_id);
     }
 }
 

@@ -113,9 +113,10 @@ ion-fab-button{
   .detail_col h3{
       display: inline;
       font-family: Montserrat;
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 600;
       color: 	#464646;
+      text-overflow: ellipsis;
   }
 
   .detail_col h2{
@@ -123,6 +124,8 @@ ion-fab-button{
     font-family: Montserrat; 
     font-weight: 600;
     color: 	#464646;
+    margin-top: 3px;
+    margin-bottom: 0px;
   }
 
   .detail_col{

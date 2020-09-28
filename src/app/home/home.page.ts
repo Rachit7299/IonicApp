@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroupDirective, NgForm } from "@angular/forms";
 import { HomePageService} from '../../services/homepage.service';
-import * as AOS from 'aos'
+import * as AOS from 'aos';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -14,8 +15,9 @@ export class HomePage implements OnInit {
   feturedCardList=[];
   topPicksList=[];
   loggedIn:boolean;
+  prdtId:String;
 
-  constructor(private fb: FormBuilder, private apiService: HomePageService) { }
+  constructor(private fb: FormBuilder, private apiService: HomePageService, public router: Router) { }
 
   searchForm= this.fb.group({
     search:['']
@@ -52,6 +54,12 @@ export class HomePage implements OnInit {
 
   Search(){
     console.log(this.searchForm.value);
+  }
+
+  product(_id){    
+    this.router.navigate(['/product'],{
+      state:{id: _id}
+    });
   }
 
 }
