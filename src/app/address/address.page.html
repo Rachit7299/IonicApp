@@ -1,0 +1,35 @@
+<ion-content>
+  <ion-text *ngIf="!signedIn">
+    <p class="login_warn">Login To view your Cart.</p>
+  </ion-text>
+  <ion-button *ngIf="!signedIn"  type="button" class="login_btn"  size="default" routerLink="/login">Login</ion-button>
+
+  <ion-spinner *ngIf="signedIn && isLoading" name="bubbles"></ion-spinner>
+
+  <ion-fab-button *ngIf="signedIn && !isLoading" color="transparent" routerLink="/">
+    <ion-icon name="arrow-back" class="back_btn_arrow"></ion-icon>
+  </ion-fab-button>
+  <ion-text *ngIf="signedIn  && !isLoading" style="line-height: 52px;">
+    <h4 class="category_head" >Saved Address</h4>
+    <a class="link_text" routerLink="/address-form">Add Address</a>
+  </ion-text>
+  <div *ngIf="signedIn && !isLoading" class="row">
+    <div class="col-xs-12 col-sm-12 col-md-10 col-lg-7">
+      <h3 *ngIf="noItem" style="    text-align: center;
+      font-size: 22px;
+      font-family: Montserrat;
+      font-weight: 500;">You have no saved addresses!</h3>
+      <div class="item_card row" *ngFor="let item of addresses">
+        <ion-text>
+          <h3>{{item.address_name}}</h3>
+          <p>{{item.address}}</p>
+          <P>{{item.city}}, {{item.state}}</P>
+          <p>{{item.pincode}}</p>
+        </ion-text>
+      </div> 
+    </div>
+    <div class="col-md-2 col-lg-5 lotie_col" style="padding: 0px;">
+      <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_CEyvj2.json"  background="transparent"  speed="1"  style="width: 500px; height: 550px;"    autoplay></lottie-player>
+    </div>
+  </div>
+</ion-content>

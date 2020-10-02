@@ -37,4 +37,8 @@ export class LoginPageService{
     deleteUser():Observable<any>{
       return this.http.delete('http://localhost:3000/user/deleteUser/'+localStorage.getItem('userId'));
     }
+
+    postaddress(data):Observable<any>{
+      return this.http.post('http://localhost:3000/user/add-address/'+localStorage.getItem('userId'),data);
+    }
 }
