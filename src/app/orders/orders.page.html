@@ -1,0 +1,38 @@
+<ion-content>
+  <ion-text *ngIf="!signedIn">
+    <p class="login_warn">Login To view your Cart.</p>
+  </ion-text>
+  <ion-button *ngIf="!signedIn"  type="button" class="login_btn"  size="default" routerLink="/login">Login</ion-button>
+
+  <ion-spinner *ngIf="signedIn && isLoading" name="bubbles"></ion-spinner>
+
+<ion-fab-button *ngIf="signedIn && !isLoading" color="transparent" routerLink="/">
+  <ion-icon name="arrow-back" class="back_btn_arrow"></ion-icon>
+</ion-fab-button>
+<ion-text *ngIf="signedIn  && !isLoading" style="line-height: 52px;">
+  <h4 class="category_head" >My Orders</h4>
+</ion-text>
+<div *ngIf="signedIn && !isLoading" class="row">
+  <div class="col-xs-12 col-sm-12 col-md-10 col-lg-7">
+    <h3 *ngIf="noItem" style="    text-align: center;
+    font-size: 22px;
+    font-family: Montserrat;
+    font-weight: 500;">You haven't purchased yet!</h3>
+    <div class="item_card row" *ngFor="let item of orderItems">
+      <div class="col img_col">
+        <img src="{{item.image}}">
+      </div>
+      <div class="col detail_col">
+        <h3>{{item.title}}</h3>
+        <h2>${{item.price}}</h2>
+        <p>Rating:4</p>
+        <a style="color: #4864e2; cursor: pointer;" (click)="product(item.product_id)">View Details</a>
+      </div>
+    </div> 
+  </div>
+  <div class="col-md-2 col-lg-5 lotie_col" style="padding: 0px;">
+    <lottie-player src="https://assets2.lottiefiles.com/private_files/lf30_OxSmXB.json"  background="transparent"  speed="0.6"  style="width: 450px; height: 550px;"    autoplay></lottie-player>
+  </div>
+</div>
+</ion-content>
+

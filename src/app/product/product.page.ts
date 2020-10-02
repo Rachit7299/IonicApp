@@ -35,11 +35,9 @@ export class ProductPage implements OnInit {
     this.isLoading=true;
     this.prdtId=this.router.getCurrentNavigation().extras.state;
     if(this.prdtId){
-      console.log(this.prdtId);
       this.apiService.getProduct(this.prdtId.id).subscribe(
         (res)=>{
           this.product=res;
-          console.log(this.product);
           this.isLoading=false;
         },(err)=>{
           console.log(err);

@@ -27,8 +27,8 @@
           <h3>{{item.title}}</h3>
           <h2>${{item.price}}</h2>
           <p>Rating:4</p>
-          <a style="color: #4864e2;" (click)="product(item.product_id)">View Details</a>&nbsp;&nbsp;
-          <a style="color: rgb(196, 28, 28); border-left: 1px solid #464646;" (click)="deleteitem(item._id)">&nbsp;&nbsp;Delete</a>
+          <a style="color: #4864e2; cursor: pointer;" (click)="product(item.product_id)">View Details</a>&nbsp;&nbsp;
+          <a style="color: rgb(196, 28, 28); border-left: 1px solid #464646; cursor: pointer;" (click)="deleteitem(item._id)">&nbsp;&nbsp;Delete</a>
         </div>
       </div> 
     </div>
@@ -82,7 +82,7 @@
               font-weight: 600;
               font-size: 18px;">${{total}}</p>
             </ion-text>
-             <ion-button style="float: right; left:0% ; margin:0%"  type="button" class="login_btn"  size="default" routerLink="/confirmation">Checkout</ion-button>
+             <ion-button style="float: right; left:0% ; margin:0%"  type="button" class="login_btn"  size="default" (click)="checkout()" [disabled]="noItem">Checkout</ion-button>
           </div>
         
       </div>

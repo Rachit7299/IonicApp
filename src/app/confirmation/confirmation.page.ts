@@ -13,7 +13,7 @@ export class ConfirmationPage implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       window.location.replace('/tabs/home');
-  },5000);
+  },1000);
   }
 
 }

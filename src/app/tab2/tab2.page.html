@@ -39,7 +39,7 @@
         <h1>{{items.title}}</h1>
         <p>£{{items.price}}</p>
       </div>
-      <div class="buy" routerLink="/featured"><ion-icon name="eye"></ion-icon></div>
+      <div class="buy"  (click)="product(items._id)"><ion-icon name="eye"></ion-icon></div>
     </ion-card-content>
       </ion-card>
     </ion-slide>

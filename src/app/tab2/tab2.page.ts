@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PhotoService } from '../services/photo.service';
 import { HomePageService} from '../../services/homepage.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
@@ -11,7 +12,7 @@ export class Tab2Page {
   feturedCardList=[];
   caraouselList=[];
 
-  constructor(public photoService: PhotoService, private apiService: HomePageService) {  }
+  constructor(public photoService: PhotoService, private apiService: HomePageService, private router: Router) {  }
 
   ngOnInit() {
     this.apiService.getfeaturedList().subscribe(
@@ -28,4 +29,9 @@ export class Tab2Page {
         });
   }
 
+  product(_id){    
+    this.router.navigate(['/product'],{
+      state:{id: _id}
+    });
+  }
 }

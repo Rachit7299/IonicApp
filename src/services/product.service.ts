@@ -33,6 +33,12 @@ export class ProductService{
         console.log(_id);
         return this.http.get('http://localhost:3000/products/viewProduct/'+_id);
     }
+    getOrders():Observable<any>{
+        return this.http.get('http://localhost:3000/user/orders/'+localStorage.getItem('userId'));
+    }
+    postOrders(data:any):Observable<any>{
+        return this.http.post('http://localhost:3000/user/orders/'+localStorage.getItem('userId'),data);
+    }
 }
 
 

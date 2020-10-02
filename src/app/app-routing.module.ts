@@ -10,7 +10,8 @@ const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomePageModule' },  { path: 'featured', loadChildren: './featured/featured.module#FeaturedPageModule' },
   { path: 'cart', loadChildren: './cart/cart.module#CartPageModule' },
   { path: 'product', loadChildren: './product/product.module#ProductPageModule' },
-  { path: 'confirmation', loadChildren: './confirmation/confirmation.module#ConfirmationPageModule' }
+  { path: 'confirmation', loadChildren: './confirmation/confirmation.module#ConfirmationPageModule' },
+  { path: 'orders', loadChildren: './orders/orders.module#OrdersPageModule' }
 
 
 

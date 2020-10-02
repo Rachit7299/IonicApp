@@ -11,7 +11,6 @@ export class CartPage implements OnInit {
 
   constructor(private apiService: ProductService, private router: Router) { }
 
-  x=[1,2,3,4,5,6];
   cartItems=[];
   signedIn:boolean;
   cartTotal:number;
@@ -101,4 +100,17 @@ export class CartPage implements OnInit {
     });
   }
 
+  checkout(){
+    console.log(this.cartItems);
+    this.apiService.postOrders(this.cartItems).subscribe(
+      (res)=>{
+        this.router.navigate(['/confirmation']);
+      },(err)=>{
+        console.log("error");
+      }
+    )
+  }
+
 }
+
+
