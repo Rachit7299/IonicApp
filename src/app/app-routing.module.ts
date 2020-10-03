@@ -16,7 +16,8 @@ const routes: Routes = [
   { path: 'orders', loadChildren: './orders/orders.module#OrdersPageModule' },
   { path: 'address', loadChildren: './address/address.module#AddressPageModule' },
   { path: 'categories', loadChildren: './categories/categories.module#CategoriesPageModule' },
-  { path: 'address-form', loadChildren: './address-form/address-form.module#AddressFormPageModule' },
+  { path: 'address-form', loadChildren: './address-form/address-form.module#AddressFormPageModule' },  { path: 'contact-us', loadChildren: './contact-us/contact-us.module#ContactUsPageModule' },
+
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

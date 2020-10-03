@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../services/product.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-featured',
@@ -8,7 +9,7 @@ import { ProductService } from '../../services/product.service';
 })
 export class FeaturedPage implements OnInit {
 
-  constructor( private apiservice: ProductService) { }
+  constructor( private apiservice: ProductService, private router: Router) { }
   x=[]
   ngOnInit() {
     this.apiservice.getProductsAll().subscribe(
@@ -16,6 +17,12 @@ export class FeaturedPage implements OnInit {
         this.x=data;
       }
     )
+  }
+
+  product(_id){    
+    this.router.navigate(['/product'],{
+      state:{id: _id}
+    });
   }
 
 }

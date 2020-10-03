@@ -5,23 +5,22 @@
       <ion-toolbar style="--background: linear-gradient(to right, #8e2de2, #4a00e0);">
         <ion-item style="--background: linear-gradient(to right, #8e2de2, #4a00e0); padding-top: 5%; padding-bottom: 5%; --inner-border-width: 0px; ">
           <ion-avatar slot="start" style="    --inner-border-width: 0px;">
-            <img src="../assets/person.png">
+            <img src="./../assets/person.png">
           </ion-avatar>          
           <h3 style="font-size: 16px; color: #ffffff; font-family: Montserrat; margin-top: 7px;"><span style="font-size: 12px;">WELCOME</span><br><span *ngIf="!loggedIn">Guest</span><span *ngIf="loggedIn">{{name}}</span></h3>
-        </ion-item>
-        
+        </ion-item>        
       </ion-toolbar>
     </ion-header>
     <ion-content>
       <ion-list>
         <ion-menu-toggle><ion-item  href='/' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="home"></ion-icon>    Home</ion-item></ion-menu-toggle>
         <ion-menu-toggle><ion-item *ngIf="!loggedIn"  routerLink='/welcome' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="log-in"></ion-icon>    Login/Sign Up</ion-item></ion-menu-toggle>
-        <ion-menu-toggle><ion-item   href='/cart' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="grid"></ion-icon>    Categories</ion-item></ion-menu-toggle>
+        <ion-menu-toggle><ion-item   href='/categories' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="grid"></ion-icon>    Categories</ion-item></ion-menu-toggle>
         <ion-menu-toggle><ion-item   href='/featured' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="shirt"></ion-icon>    Featured</ion-item></ion-menu-toggle>
         <ion-menu-toggle><ion-item   href='/cart' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="cart"></ion-icon>    Cart</ion-item></ion-menu-toggle>
         <ion-menu-toggle><ion-item   href='/orders' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="basket"></ion-icon>    My Orders</ion-item></ion-menu-toggle>
         <ion-menu-toggle><ion-item   href='/tabs/tab3' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="settings"></ion-icon>    My Account</ion-item></ion-menu-toggle>
-        <ion-menu-toggle><ion-item   href='/cart' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="chatbox-ellipses"></ion-icon>    Contact Us</ion-item></ion-menu-toggle>
+        <ion-menu-toggle><ion-item   href='/contact-us' style="font-family: Montserrat; --inner-border-width: 0px;"><ion-icon name="chatbox-ellipses"></ion-icon>    Contact Us</ion-item></ion-menu-toggle>
         <ion-menu-toggle><ion-item *ngIf="loggedIn"  (click)="logout()" style="font-family: Montserrat; --inner-border-width: 0px; cursor: pointer;"><ion-icon name="log-out"></ion-icon>    Logout</ion-item></ion-menu-toggle>
       </ion-list>
     </ion-content>

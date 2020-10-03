@@ -1,0 +1,41 @@
+.my-custom-menu {
+    --width: 500px;
+  }
+
+ion-toolbar{
+  --background: linear-gradient(to left , #667FEA, #64B3FE);
+  color: #ffffff;
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+ion-content{
+  --padding-start: 3%;
+  --padding-end: 3%;
+  --padding-top: 3%;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 36px;
+    font-size: 24px;
+    font-family: Montserrat;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: 18px;
+    font-family: Montserrat;
+}
+
+p {
+    font-family: Montserrat;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+hr{
+    border-width: 2px;
+}
