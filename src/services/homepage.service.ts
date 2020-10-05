@@ -10,15 +10,15 @@ export class HomePageService{
     constructor(private http:HttpClient){}
 
     getcategories():Observable<any>{
-        return this.http.get('http://localhost:3000/home/categories');
+        return this.http.get('https://ionic-server-app.herokuapp.com/home/categories');
     }
     getfeaturedList():Observable<any>{
-      return this.http.get('http://localhost:3000/home/featured');
+      return this.http.get('https://ionic-server-app.herokuapp.com/home/featured');
   }
     gettopPicks():Observable<any>{
-      return this.http.get('http://localhost:3000/home/toppicks');
+      return this.http.get('https://ionic-server-app.herokuapp.com/home/toppicks');
     }
     getcaraousel():Observable<any>{
-      return this.http.get('http://localhost:3000/home/caraousel');
+      return this.http.get('https://ionic-server-app.herokuapp.com/home/caraousel');
     }
 }

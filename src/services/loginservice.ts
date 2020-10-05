@@ -12,7 +12,7 @@ export class LoginPageService{
     constructor(private http:HttpClient, private router: Router){}
 
     loginUser(data):Observable<any>{
-        return this.http.post('http://localhost:3000/user/login',data);
+        return this.http.post('https://ionic-server-app.herokuapp.com/user/login',data);
     }
 
     getToken() {
@@ -27,18 +27,18 @@ export class LoginPageService{
     }
 
     getuserName():Observable<any>{
-      return this.http.get('http://localhost:3000/user/name/'+localStorage.getItem('userId'));
+      return this.http.get('https://ionic-server-app.herokuapp.com/user/name/'+localStorage.getItem('userId'));
     }
 
     getUserDetails():Observable<any>{
-      return this.http.get('http://localhost:3000/user/'+localStorage.getItem('userId'));
+      return this.http.get('https://ionic-server-app.herokuapp.com/user/'+localStorage.getItem('userId'));
     }
 
     deleteUser():Observable<any>{
-      return this.http.delete('http://localhost:3000/user/deleteUser/'+localStorage.getItem('userId'));
+      return this.http.delete('https://ionic-server-app.herokuapp.com/user/deleteUser/'+localStorage.getItem('userId'));
     }
 
     postaddress(data):Observable<any>{
-      return this.http.post('http://localhost:3000/user/add-address/'+localStorage.getItem('userId'),data);
+      return this.http.post('https://ionic-server-app.herokuapp.com/user/add-address/'+localStorage.getItem('userId'),data);
     }
 }

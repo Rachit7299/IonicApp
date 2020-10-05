@@ -10,7 +10,7 @@ export class SignUpPageService{
     constructor(private http:HttpClient){}
 
     registeruser(data):Observable<any>{
-        return this.http.post('http://localhost:3000/user/signup',data);
+        return this.http.post('https://ionic-server-app.herokuapp.com/user/signup',data);
     }
 
 }
