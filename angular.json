@@ -109,6 +109,7 @@
             "styles": [],
             "scripts": [],
             "assets": [
+              "src/_redirects",
               {
                 "glob": "favicon.ico",
                 "input": "src/",
