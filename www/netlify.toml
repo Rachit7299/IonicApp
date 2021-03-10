@@ -1,5 +1,0 @@
-[[redirects]]
-  from = "/tabs/homr"
-  to = "/categories"
-  status = 301
-  force = true
